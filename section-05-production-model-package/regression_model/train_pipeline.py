@@ -1,6 +1,8 @@
 import numpy as np
 from config.core import config
+# Import the pipeline "price_pipe" from the other module
 from pipeline import price_pipe
+# Import the functions to import dataset and export pipeline from the data_manager module
 from processing.data_manager import load_dataset, save_pipeline
 from sklearn.model_selection import train_test_split
 
@@ -8,10 +10,10 @@ from sklearn.model_selection import train_test_split
 def run_training() -> None:
     """Train the model."""
 
-    # read training data
+    # read training data - import from the file address stated in the config file.
     data = load_dataset(file_name=config.app_config.training_data_file)
 
-    # divide train and test
+    # divide train and test - all the details (features/targets/test size/random states) are includedin the config file.
     X_train, X_test, y_train, y_test = train_test_split(
         data[config.model_config.features],  # predictors
         data[config.model_config.target],

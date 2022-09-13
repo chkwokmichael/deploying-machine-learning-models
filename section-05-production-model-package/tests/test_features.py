@@ -1,7 +1,7 @@
 from regression_model.config.core import config
 from regression_model.processing.features import TemporalVariableTransformer
 
-
+# sample_input_data is a pytest fixture
 def test_temporal_variable_transformer(sample_input_data):
     # Given
     transformer = TemporalVariableTransformer(

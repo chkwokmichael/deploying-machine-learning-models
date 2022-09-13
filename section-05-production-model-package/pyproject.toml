@@ -1,3 +1,4 @@
+# Key lines to do with packaging - baside requirements
 [build-system]
 requires = [
     "setuptools>=42",

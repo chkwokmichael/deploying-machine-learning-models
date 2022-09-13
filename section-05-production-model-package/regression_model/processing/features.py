@@ -3,6 +3,10 @@ from typing import List
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 
+# The structure of the functions are:
+## 1. __init__ : initiate variables
+## 2. fit
+## 3. transform
 
 class TemporalVariableTransformer(BaseEstimator, TransformerMixin):
     """Temporal elapsed time transformer."""

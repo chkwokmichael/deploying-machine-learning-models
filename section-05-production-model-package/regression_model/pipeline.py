@@ -11,9 +11,11 @@ from sklearn.linear_model import Lasso
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import Binarizer, MinMaxScaler
 
+# Self defined modules
 from regression_model.config.core import config
 from regression_model.processing import features as pp
 
+# All veriables are defined in the config file.
 price_pipe = Pipeline(
     [
         # ===== IMPUTATION =====

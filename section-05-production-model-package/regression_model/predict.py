@@ -8,6 +8,7 @@ from regression_model.config.core import config
 from regression_model.processing.data_manager import load_pipeline
 from regression_model.processing.validation import validate_inputs
 
+# Specific the file which stores the version of the pipeline
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
 _price_pipe = load_pipeline(file_name=pipeline_file_name)
 
@@ -33,3 +34,8 @@ def make_prediction(
         }
 
     return results
+
+# Exercise
+# To test the make_prediction() function, we need to test:
+## 1. validation_data - test if the validation_inputs function works as expected (changing column names, data types and drop NAs)
+## 2. predict() - test if the model predicts the expected answers. 
